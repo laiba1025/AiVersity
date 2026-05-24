@@ -1,0 +1,243 @@
+classDiagram
+%% AiVersity (CampusCompanion) Class Diagram - Corrected & Concise
+%% Legend: <<interface>> contract, <<service>> internal service, <<controller>> route handler, <<entity>> data model
+
+class ExpressApp {
+    +configureMiddleware(): void
+    +mountRoutes(): void
+    +start(port: int): void
+}
+
+class RoutesLite {
+    <<controller>>
+    +registerRoutes(app: Express): void
+    -users: UserRec[]
+    -documents: DocRec[]
+}
+
+class RoutesFull {
+    <<controller>>
+    +registerRoutes(app: Express): void
+    -storage: IStorage
+    -websocketServer: WebSocketServer
+    +authEndpoints(): void
+    +documentEndpoints(): void
+    +chatEndpoints(): void
+    +recommendationEndpoints(): void
+}
+
+class IStorage {
+    <<interface>>
+    +createUser(insert: InsertUser): User
+    +getUser(id: int): User?
+    +getUserByUsername(username: string): User?
+    +updateUserPassword(id: int, hashed: string): User?
+    +updateUserLanguage(id: int, lang: string): User?
+    +getDocuments(userId: int): Document[]
+    +createDocument(insert: InsertDocument): Document
+    +updateDocumentStatus(id: int, status: string): Document?
+    +getCourses(program?: string): Course[]
+    +getCoursePrereqs(courseId: int): CoursePrerequisite[]
+    +getUserCompletedCourses(userId: int): UserCompletedCourse[]
+    +setUserProfile(userId: int, profile: any): any
+    +getUserProfile(userId: int): any?
+}
+
+class MemStorage {
+    <<service>>
+    -users: Map<int,User>
+    -documents: Map<int,Document>
+    -courses: Map<int,Course>
+    -coursePrereqs: Map<int,CoursePrerequisite>
+    -userCompleted: Map<int,UserCompletedCourse>
+    -userProfiles: Map<int,any>
+    +snapshotFilePath(): string
+    +saveSnapshotSync(): void
+    +seedData(): void
+}
+
+class SqlStorage {
+    <<service>>
+    +createUser(insert: InsertUser): User
+    +updateUserLanguage(id: int, lang: string): User?
+    +updateUserPassword(id: int, pwd: string): User?
+    +getDocuments(userId: int): Document[]
+    +getDocument(id: int): Document?
+    +createDocument(insert: InsertDocument): Document
+    +updateDocument(id: int, patch: any): Document?
+    +getCourses(program?: string): Course[]
+    +getCoursePrereqs(courseId: int): CoursePrerequisite[]
+}
+
+class StorageService {
+    <<service>>
+    -blobClient: BlobServiceClient?
+    +initialize(): void
+    +uploadDocument(name: string, buffer: Buffer): string
+    +listDocuments(): string[]
+    +exists(filename: string): bool
+    +generateSasUrl(filename: string, minutes: int): string
+    +deleteDocument(filename: string): void
+}
+
+class AzureConfig {
+    <<service>>
+    +getOpenAIKey(): string
+    +getStorageConnectionString(): string
+    +getSecretOrEnv(name: string, env?: string): string
+}
+
+class DocumentProcessor {
+    <<service>>
+    -embeddings: AzureOpenAIEmbeddings
+    -vectorstorePath: string
+    +processDocuments(pdfPaths: string[]): FAISS?
+    +processDocumentsFromApi(apiUrl: string): FAISS?
+    +_vectorstoreExists(): bool
+}
+
+class ChatManager {
+    <<service>>
+    -vectorstore: FAISS?
+    -retriever: Retriever?
+    -azureClient: AzureOpenAI
+    -prompt: ChatPromptTemplate
+    +getResponse(query: string, history: Message[]): tuple
+    +_invoke_azure(promptValue: string): string
+    +_try_course_fallback(query: string): object?
+}
+
+class RecommendationEngine {
+    <<service>>
+    +scoreCourse(course: Course, profile: any): number
+    +evaluatePasswordStrength(pwd: string): string
+    +normalizeDeadline(value: any): string
+}
+
+class User {
+    <<entity>>
+    +id: int
+    +username: string
+    +password: string
+    +fullName: string
+    +language: string
+}
+
+class Document {
+    <<entity>>
+    +id: int
+    +userId: int
+    +title: string
+    +filename: string
+    +status: string
+    +deadline: Date?
+    +fileContent: string
+}
+
+class Course {
+    <<entity>>
+    +id: int
+    +code: string
+    +title: string
+    +program: string
+    +credits: int
+    +semester: int?
+    +required: bool
+    +elective: bool
+}
+
+class CoursePrerequisite {
+    <<entity>>
+    +id: int
+    +courseId: int
+    +prereqCourseId: int
+}
+
+class UserCompletedCourse {
+    <<entity>>
+    +id: int
+    +userId: int
+    +courseId: int
+    +term: string?
+    +grade: string?
+}
+
+class Message {
+    <<entity>>
+    +id: int
+    +userId: int
+    +content: string
+    +isUserMessage: bool
+    +timestamp: Date
+    +sources: string[]?
+}
+
+class Notification {
+    <<entity>>
+    +id: int
+    +userId: int
+    +title: string
+    +description: string
+    +type: string
+    +read: bool
+    +date: Date
+}
+
+class Event {
+    <<entity>>
+    +id: int
+    +title: string
+    +description: string
+    +location: string
+    +datetime: Date
+}
+
+class Vectorstore {
+    <<FAISS>>
+    +similarity_search_with_score(q: string, k: int): array
+    +as_retriever(opts: any): Retriever
+}
+
+class Retriever {
+    +invoke(query: string): Document[]
+}
+
+class ReactHook_useDocuments {
+    +fetchDocuments(): Promise
+}
+
+ExpressApp --> RoutesFull
+ExpressApp --> RoutesLite
+RoutesFull --> IStorage
+RoutesFull --> StorageService
+RoutesFull --> ChatManager
+RoutesFull --> RecommendationEngine
+ChatManager --> Vectorstore
+ChatManager --> Retriever
+DocumentProcessor --> Vectorstore
+DocumentProcessor --> AzureConfig
+StorageService --> AzureConfig
+SqlStorage --> AzureConfig
+MemStorage --> Document
+MemStorage --> Course
+MemStorage --> CoursePrerequisite
+MemStorage --> UserCompletedCourse
+RecommendationEngine --> Course
+RecommendationEngine --> UserCompletedCourse
+RoutesFull --> User
+RoutesFull --> Document
+RoutesFull --> Course
+RoutesFull --> Notification
+RoutesFull --> Message
+Vectorstore --> Document
+Retriever --> Document
+ChatManager --> Message
+ReactHook_useDocuments --> RoutesFull
+IStorage <|.. MemStorage
+IStorage <|.. SqlStorage
+
+%% Notes:
+%% - Concise format with correct Mermaid syntax
+%% - Optional fields marked with '?'
+%% - Precise return types (Document[], Course[], tuple, etc.)
+%% - Interface implementation using dotted realization arrows

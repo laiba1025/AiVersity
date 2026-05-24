@@ -1,0 +1,79 @@
+# ========== General ==========
+.DS_Store
+*.log
+*.pem
+*.tar.gz
+*.orig.*
+*.tsbuildinfo
+
+# ========== Environment Files ==========
+.env
+.env.*
+.env*.local
+server/.env
+
+# ========== Node.js ==========
+node_modules/
+client/node_modules/
+mobile/CampusCompanion/node_modules/
+server/node_modules/
+
+# ========== Lock files ==========
+package-lock.json
+client/package-lock.json
+mobile/CampusCompanion/package-lock.json
+server/package-lock.json
+yarn.lock
+
+# ========== TypeScript ==========
+*.tsbuildinfo
+
+# ========== Expo / React Native ==========
+mobile/.expo/
+mobile/CampusCompanion/.expo/
+mobile/web-build/
+mobile/dist/
+mobile/CampusCompanion/expo-env.d.ts
+
+# iOS / Android credentials
+*.keystore
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro bundler cache
+.metro-health-check
+
+# ========== Flask / Python ==========
+rag_service/__pycache__/
+rag_service/venv/
+rag_service/.venv/
+rag_service/*.pyc
+rag_service/.mypy_cache/
+rag_service/.pytest_cache/
+rag_service/.coverage
+
+# Vector DB and AI models
+rag_service/index.faiss
+rag_service/index.pkl
+
+# ========== Vite ==========
+client/vite.config.ts.*
+client/public/
+client/dist/
+
+# ========== Build Artifacts ==========
+dist/
+server/public/
+mobile/dist/
+client/dist/
+
+# ========== Shared and Config ==========
+.config/
+shared/
+
+# ========== Editor / IDE ==========
+.vscode/
+.idea/

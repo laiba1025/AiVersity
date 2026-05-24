@@ -1,0 +1,745 @@
+{
+  "program": "CS BSc",
+  "courses": [
+    {
+      "program": "CS BSc",
+      "code": "Program",
+      "title": "(English for Foreign Students)",
+      "credits": 0,
+      "semester": null,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fPRECPEG",
+      "title": "Computers in practice",
+      "credits": 2,
+      "semester": 0,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fPRESPROGEG",
+      "title": "Scratch Programming",
+      "credits": 4,
+      "semester": 0,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fPRETMKG",
+      "title": "Learning Methodology",
+      "credits": 1,
+      "semester": 0,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fPRETMG",
+      "title": "Topics in Mathematics",
+      "credits": 8,
+      "semester": 0,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fPREFICTG",
+      "title": "Introduction to computational thinking",
+      "credits": 4,
+      "semester": 0,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fPREIMEG",
+      "title": "Intermediate English",
+      "credits": 6,
+      "semester": 0,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "XCP",
+      "title": "Mixed with Continuous Assessment | XE: Mixed with Exam | XP: Mixed with Practice",
+      "credits": 0,
+      "semester": 0,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fSZGREG",
+      "title": "Computer systems",
+      "credits": 5,
+      "semester": 1,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fPROGEG",
+      "title": "Programming",
+      "credits": 6,
+      "semester": 1,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fIMPROGEG",
+      "title": "Imperative programming",
+      "credits": 5,
+      "semester": 1,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fFUNPEG",
+      "title": "Functional programming",
+      "credits": 5,
+      "semester": 1,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fMATAG",
+      "title": "Basic Mathematics",
+      "credits": 4,
+      "semester": 1,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fTMKG",
+      "title": "Learning Methodology",
+      "credits": 1,
+      "semester": 1,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fIVMEG",
+      "title": "Business fundamentals",
+      "credits": 3,
+      "semester": 1,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fPNYEG",
+      "title": "Programming languages",
+      "credits": 6,
+      "semester": 2,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fOEPROGEG",
+      "title": "Object-oriented programming",
+      "credits": 6,
+      "semester": 2,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fWF1EG",
+      "title": "Web development",
+      "credits": 3,
+      "semester": 2,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAA1E",
+      "title": "Algorithms and data structures I (Lecture)",
+      "credits": 2,
+      "semester": 2,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAA1G",
+      "title": "Algorithms and data structures I (Practice)",
+      "credits": 3,
+      "semester": 2,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fDM1E",
+      "title": "Discrete mathematics I (Lecture)",
+      "credits": 2,
+      "semester": 2,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fDM1G",
+      "title": "Discrete mathematics I (Practice)",
+      "credits": 3,
+      "semester": 2,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAN1E",
+      "title": "Analysis I (Lecture)",
+      "credits": 2,
+      "semester": 2,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAN1G",
+      "title": "Analysis I (Practice)",
+      "credits": 3,
+      "semester": 2,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAA2E",
+      "title": "Algorithms and data structures II (Lecture)",
+      "credits": 2,
+      "semester": 3,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAA2G",
+      "title": "Algorithms and data structures II (Practice)",
+      "credits": 3,
+      "semester": 3,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fWPEG",
+      "title": "Web programming",
+      "credits": 4,
+      "semester": 3,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fPROGTEG",
+      "title": "Programming technology",
+      "credits": 5,
+      "semester": 3,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAN2E",
+      "title": "Analysis II (Lecture)",
+      "credits": 2,
+      "semester": 3,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAN2G",
+      "title": "Analysis II (Practice)",
+      "credits": 3,
+      "semester": 3,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fDMAG",
+      "title": "Application of discrete models",
+      "credits": 3,
+      "semester": 3,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fOPREG",
+      "title": "Operating systems",
+      "credits": 3,
+      "semester": 4,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAB1E",
+      "title": "Databases I (Lecture)",
+      "credits": 2,
+      "semester": 4,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAB1G",
+      "title": "Databases I (Practice)",
+      "credits": 2,
+      "semester": 4,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fSZTEG",
+      "title": "Software technology",
+      "credits": 5,
+      "semester": 4,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fSZEA1E",
+      "title": "Fundamentals of theory of computation I (Lecture)",
+      "credits": 2,
+      "semester": 4,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fSZEA1G",
+      "title": "Fundamentals of theory of computation I (Practice)",
+      "credits": 3,
+      "semester": 4,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fNM1E",
+      "title": "Numerical methods (Lecture)",
+      "credits": 2,
+      "semester": 4,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fNM1G",
+      "title": "Numerical methods (Practice)",
+      "credits": 3,
+      "semester": 4,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKPROGEG",
+      "title": "Concurrent programming",
+      "credits": 3,
+      "semester": 5,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fTKHE",
+      "title": "Telecommunication networks (Lecture)",
+      "credits": 2,
+      "semester": 5,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fTKHG",
+      "title": "Telecommunication networks (Practice)",
+      "credits": 3,
+      "semester": 5,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fMIAE",
+      "title": "Artificial intelligence",
+      "credits": 3,
+      "semester": 5,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAB2E",
+      "title": "Databases II (Lecture)",
+      "credits": 2,
+      "semester": 5,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fAB2G",
+      "title": "Databases II (Practice)",
+      "credits": 3,
+      "semester": 5,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fSZEA2E",
+      "title": "Fundamentals of theory of computation II (Lecture)",
+      "credits": 2,
+      "semester": 5,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fSZEA2G",
+      "title": "Fundamentals of theory of computation II (Practice)",
+      "credits": 3,
+      "semester": 5,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fVSZG",
+      "title": "Probability and statistics",
+      "credits": 3,
+      "semester": 5,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fSZD",
+      "title": "Thesis consultation",
+      "credits": 20,
+      "semester": 6,
+      "required": true,
+      "elective": false,
+      "compulsoryElective": false
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fKVSZKBIZTE",
+      "title": "Cybersecurity Basic",
+      "credits": 4,
+      "semester": 2,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVBGTE",
+      "title": "Introduction to machine learning",
+      "credits": 3,
+      "semester": 3,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVPREE",
+      "title": "Programming theory (Lecture)",
+      "credits": 2,
+      "semester": 3,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVPREG",
+      "title": "Programming theory (Practice)",
+      "credits": 3,
+      "semester": 3,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVPYEG",
+      "title": "Python",
+      "credits": 5,
+      "semester": 3,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVIADSE",
+      "title": "Applied Data Science",
+      "credits": 2,
+      "semester": 3,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fKVSZGE",
+      "title": "Computer graphics (Lecture)",
+      "credits": 3,
+      "semester": 3,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fKVSZGG",
+      "title": "Computer graphics (Practice)",
+      "credits": 3,
+      "semester": 3,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVKRBE",
+      "title": "Cryptography and security (Lecture)",
+      "credits": 2,
+      "semester": 4,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVKRBG",
+      "title": "Cryptography and security (Practice)",
+      "credits": 3,
+      "semester": 4,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVPYEG",
+      "title": "Python",
+      "credits": 5,
+      "semester": 4,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fKVKHSZGG",
+      "title": "Intermediate Computer Graphics",
+      "credits": 3,
+      "semester": 4,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fKVNFIAEG",
+      "title": "Native cloud computing applications",
+      "credits": 5,
+      "semester": 4,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fKVHWPEG",
+      "title": "Advanced web programming",
+      "credits": 5,
+      "semester": 4,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVPREE",
+      "title": "Programming theory (Lecture)",
+      "credits": 2,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVPREG",
+      "title": "Programming theory (Practice)",
+      "credits": 3,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18KVPRJG",
+      "title": "Tools of software projects",
+      "credits": 3,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVFPE",
+      "title": "Compilers (Lecture)",
+      "credits": 3,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVFPG",
+      "title": "Compilers (Practice)",
+      "credits": 2,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVADA",
+      "title": "ADA",
+      "credits": 5,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVPYEG",
+      "title": "Python",
+      "credits": 5,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-18fKVIADSE",
+      "title": "Applied Data Science",
+      "credits": 2,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fKVSZGE",
+      "title": "Computer graphics (Lecture)",
+      "credits": 3,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fKVSZGG",
+      "title": "Computer graphics (Practice)",
+      "credits": 3,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    },
+    {
+      "program": "CS BSc",
+      "code": "IP-24fKVNFIAEG",
+      "title": "Native cloud computing applications",
+      "credits": 5,
+      "semester": 5,
+      "required": false,
+      "elective": true,
+      "compulsoryElective": true
+    }
+  ]
+}

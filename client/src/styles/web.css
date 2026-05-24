@@ -1,0 +1,204 @@
+/* Desktop styles */
+@media (min-width: 768px) {
+  .desktop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .desktop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .desktop-sidebar {
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+  }
+
+  .desktop-main {
+    padding: 2rem;
+    background: hsl(var(--card));
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  }
+}
+
+/* Improved scrollbars for desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.06);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.12);
+  }
+}
+
+/* Styled sliders */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -5px; /* center thumb */
+  height: 22px;
+  width: 22px;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  box-shadow: 0 6px 18px rgba(38,0,77,0.25);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+  height: 10px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  box-shadow: 0 6px 18px rgba(38,0,77,0.25);
+  border: none;
+}
+
+/* Value bubble for sliders */
+.slider-bubble {
+  position: absolute;
+  top: -34px;
+  transform: translateX(-50%);
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.4);
+  pointer-events: none;
+  color: hsl(var(--card-foreground));
+}
+
+/* Small smooth button hover */
+.interactive-action-btn {
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+.interactive-action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.08);
+}
+
+/* Brand helpers for new AiVersity look */
+.brand-btn {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 6px 18px rgba(38, 0, 77, 0.06);
+}
+
+.card-soft {
+  background: linear-gradient(180deg, hsl(var(--card)), color-mix(in srgb, hsl(var(--card)) 86%, transparent));
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(2,6,23,0.5);
+  padding: 1rem;
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--card-foreground));
+}
+
+.muted {
+  color: hsl(var(--foreground) / 0.6);
+}
+
+/* Ensure chat area feels airy */
+.chat-container {
+  background: transparent;
+}
+
+/* Quick dark-mode overrides for utility classes that were using white surfaces
+   These are scoped to the default (dark) theme. When html[data-theme="light"]
+   is set, these overrides will not apply and native light values will be used. */
+html:not([data-theme='light']) {
+  .bg-white {
+    background-color: hsl(var(--card)) !important;
+    color: hsl(var(--card-foreground)) !important;
+  }
+
+  .bg-white\/90 {
+    background-color: rgba(255,255,255,0.03) !important;
+  }
+
+  .border-neutral-200 {
+    border-color: hsl(var(--border)) !important;
+  }
+
+  .text-neutral-500 {
+    color: rgba(255,255,255,0.65) !important;
+  }
+}
+
+/* Side-slider specific styles */
+.side-slider {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-shadow: 0 2px 8px rgb(1, 3, 12);
+  overflow: hidden;
+}
+
+.side-slider .material-icons {
+  color: hsl(var(--sidebar-foreground));
+}
+
+.side-slider a .material-icons {
+  display: inline-block;
+}
+
+.side-slider .muted {
+  color: hsl(var(--foreground) / 0.1);
+}
+
+/* Keep slider transitions smooth */
+.side-slider .label-enter {
+  opacity: 0;
+  transform: translateX(-6px);
+}
+.side-slider .label-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 180ms, transform 180ms;
+}

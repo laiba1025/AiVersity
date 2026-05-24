@@ -1,0 +1,23 @@
+flowchart TB
+  A[Unit Tests]:::unit
+  B[API / Integration Tests]:::api
+  C[RAG Pipeline Tests]:::rag
+  D[End-to-End Tests]:::e2e
+  E[Non-Functional Checks\nPerformance / Security / Mutation]:::non
+
+  subgraph App Layers
+    A --> B
+    B --> C
+    C --> D
+  end
+
+  classDef unit fill:#DFF7DF,stroke:#2E7D32,color:#1B5E20
+  classDef api fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+  classDef rag fill:#FFF9C4,stroke:#F9A825,color:#F57F17
+  classDef e2e fill:#FCE4EC,stroke:#AD1457,color:#880E4F
+  classDef non fill:#ECEFF1,stroke:#455A64,color:#263238
+
+  E -.gates & thresholds.- A
+  E -.gates & thresholds.- B
+  E -.gates & thresholds.- C
+  E -.gates & thresholds.- D

@@ -1,0 +1,9 @@
+flowchart TD
+  A[Login] --> B[Upload Document]
+  B --> C[List Shows Document]
+  C --> D[Request SAS URL]
+  D --> E[Download Verifies Access]
+  E --> F[Ask RAG Question]
+  F --> G[Retrieve & Answer]
+  G --> H[Show Response w/ Sources]
+  H --> I[Notifications Updated]

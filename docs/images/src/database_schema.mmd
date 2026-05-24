@@ -1,0 +1,125 @@
+erDiagram
+    users ||--o{ documents : "owns"
+    users ||--o{ messages : "sends"
+    users ||--o{ notifications : "receives"
+    users ||--o{ user_completed_courses : "completes"
+    users ||--o| student_profiles : "has"
+    
+    courses ||--o{ course_prerequisites : "requires"
+    courses ||--o{ course_prerequisites : "prerequisite_for"
+    courses ||--o{ user_completed_courses : "taken_by"
+    
+    locations ||--o{ events : "hosts"
+    locations ||--o{ contacts : "located_at"
+    
+    events }o--|| locations : "held_at"
+    contacts }o--|| locations : "office_at"
+    
+    users {
+        serial id PK
+        text username UK "unique, not null"
+        text password "not null"
+        text full_name "not null"
+        text language "default: en"
+    }
+    
+    documents {
+        serial id PK
+        integer user_id FK "not null"
+        text title "not null"
+        text description
+        text filename "not null"
+        text file_content "base64 encoded"
+        text file_type "not null"
+        text status "completed/pending/required"
+        date deadline
+        timestamp created_at "default: now()"
+    }
+    
+    locations {
+        serial id PK
+        text name "not null"
+        text description
+        text building
+        text floor
+        text room_number
+        text hours
+        jsonb coordinates "lat, lng - not null"
+        text location_type "building/office/dormitory"
+    }
+    
+    messages {
+        serial id PK
+        integer user_id FK "not null"
+        text content "not null"
+        boolean is_user_message "not null"
+        jsonb sources "RAG source docs"
+        timestamp timestamp "default: now()"
+    }
+    
+    notifications {
+        serial id PK
+        integer user_id FK "not null"
+        text title "not null"
+        text description "not null"
+        text type "deadline/event/document/info"
+        boolean read "default: false"
+        timestamp date "default: now()"
+        integer related_item_id
+        text related_item_type "document/event"
+    }
+    
+    events {
+        serial id PK
+        text title "not null"
+        text description "not null"
+        text location "not null"
+        integer location_id FK
+        timestamp datetime "not null"
+    }
+    
+    contacts {
+        serial id PK
+        text name "not null"
+        text department "not null"
+        text role "not null"
+        text email "not null"
+        text phone
+        text office
+        text office_hours
+        jsonb tags "registration/visa/scholarship"
+        integer location_id FK
+    }
+    
+    courses {
+        serial id PK
+        text code "not null"
+        text title "not null"
+        text program "AI MSc/CS BSc - not null"
+        integer credits "not null"
+        integer semester "recommended semester"
+        boolean required "default: false"
+        boolean elective "default: false"
+    }
+    
+    course_prerequisites {
+        serial id PK
+        integer course_id FK "not null"
+        integer prereq_course_id FK "not null"
+    }
+    
+    user_completed_courses {
+        serial id PK
+        integer user_id FK "not null"
+        integer course_id FK "not null"
+        text term "2024-fall format"
+        text grade
+    }
+    
+    student_profiles {
+        serial id PK
+        integer user_id FK "unique, not null"
+        text program "not null"
+        integer current_semester
+        jsonb curriculum "course plan"
+    }

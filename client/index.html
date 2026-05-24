@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AiVersity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="theme-color" content="#1E3A8A">
+    <meta name="description" content="Mobile app for international students with RAG-powered chatbot, document management, campus map, and multilingual support">
+    <style>
+      :root{
+        /* New AiVersity dark theme tokens (H S% L%) used by Tailwind config (hsl(var(--...))) */
+        --background: 217 41% 19%; /* deep navy (#1D2D46) */
+        --foreground: 210 10% 96%; /* near-white for primary text */
+
+        /* Card & surface tokens */
+        --card: 217 36% 14%; /* slightly lighter than page */
+        --card-foreground: 210 10% 96%;
+        --popover: 217 35% 12%;
+        --popover-foreground: 210 10% 96%;
+
+        /* Borders/inputs */
+        --border: 217 30% 12%;
+        --input: 217 30% 12%;
+        --ring: 217 50% 40%;
+
+        /* Sidebar */
+        --sidebar-background: 217 36% 14%;
+        --sidebar-foreground: 210 10% 92%;
+        --sidebar-accent: 265 78% 45%;
+
+        /* Brand */
+        --primary: 220 58% 65%; /* purple */
+        --primary-foreground: 0 0% 100%;
+        --accent: 14 90% 55%;
+          /* Assistant bubble gradient (start/end H S% L%) - easy to tweak */
+      --assistant-start: 214 90% 12%; /* deep purple */
+      --assistant-end: 210 18% 26%; /* lighter purple */
+      /* Flat assistant color (match card surface) */
+      --assistant-color: 210 55% 11%; /* same as --card */
+      }
+
+      /* Light mode overrides when html[data-theme="light"] is set */
+      html[data-theme="light"] {
+        --background: 210 30% 98%; /* very light gray */
+        --foreground: 210 10% 12%; /* dark text */
+
+        --card: 0 0% 100%; /* white card */
+        --card-foreground: 210 10% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 210 10% 12%;
+
+        --border: 210 16% 88%;
+        --input: 210 16% 96%;
+        --ring: 220 80% 90%;
+
+        --sidebar-background: 210 14% 96%;
+        --sidebar-foreground: 210 10% 18%;
+        --sidebar-accent: 265 78% 45%;
+
+        --primary: 220 58% 45%; /* toned primary for light mode */
+        --primary-foreground: 0 0% 100%;
+
+        --assistant-color: 214 90% 96%; /* light assistant tint */
+      }
+
+      body {
+        font-family: 'Poppins', Inter, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        height: 100vh;
+        overflow: hidden;
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+      }
+      .material-icons {
+        font-size: inherit;
+        line-height: inherit;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

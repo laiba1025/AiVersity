@@ -1,0 +1,15 @@
+sequenceDiagram
+  participant U as User
+  participant F as Frontend (Web/Mobile)
+  participant B as Backend (Express)
+  participant V as Vectorstore (FAISS)
+  participant O as Azure OpenAI
+
+  U->>F: Ask policy question
+  F->>B: POST /api/chat {query}
+  B->>V: MMR search (k=12, fetch_k=36)
+  V-->>B: Top-k chunks + scores
+  B->>O: Prompt(query + context)
+  O-->>B: Answer + citations
+  B-->>F: { answer, sources }
+  F-->>U: Render response + sources
