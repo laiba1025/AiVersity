@@ -37,20 +37,22 @@ function Router() {
     // from the root path in the other effect above.
   }, [isAuthenticated, isLoading, location, setLocation]);
 
+  const isHome = location === "/home";
+
   return (
-  <div className="flex flex-col h-screen bg-transparent">
-      <AppBar />
+    <div className={`flex flex-col h-screen ${isHome ? "bg-neutral-950" : "bg-transparent"}`}>
+      {!isHome && <AppBar />}
       <div className="flex flex-1 overflow-hidden">
         {/* Sliding left menu - hide on auth pages and on small screens */}
-        {!(location === '/login' || location === '/register') && (
+        {!isHome && !(location === "/login" || location === "/register") && (
           <div className="hidden md:block">
             <SideSlider />
           </div>
         )}
 
         {/* Main Content */}
-        <main className="flex-1 overflow-y-auto px-4 sm:px-6 py-6">
-          <div className="max-w-5xl mx-auto">
+        <main className={isHome ? "flex-1 overflow-y-auto" : "flex-1 overflow-y-auto px-4 sm:px-6 py-6"}>
+          <div className={isHome ? "w-full" : "max-w-5xl mx-auto"}>
             <Switch>
               <Route path="/home" component={Home} />
               <Route path="/register" component={Register} />
@@ -68,9 +70,11 @@ function Router() {
       </div>
 
       {/* Bottom navigation: show only on small screens */}
-      <div className="md:hidden">
-        <BottomNavigation />
-      </div>
+      {!isHome && (
+        <div className="md:hidden">
+          <BottomNavigation />
+        </div>
+      )}
     </div>
   );
 }
