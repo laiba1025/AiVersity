@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Model configurations
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "your-groq-api-key")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # Vector store settings
 CHUNK_SIZE = 1000
